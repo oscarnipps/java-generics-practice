@@ -37,10 +37,18 @@ public class WildCardExample {
         WildCardExample.secondMethod(catFishList);
         WildCardExample.secondMethod(birdList);
 
+        //its unbounded so any item would work
+        WildCardExample.thirdMethod(fishList);
+        WildCardExample.thirdMethod(animalList);
+        WildCardExample.thirdMethod(birdList);
 
 
     }
 
+    //lower bounded method
     public static void firstMethod(List <? super Fish> items) { }
+    //upper bounded method
     public static void secondMethod(List <? extends Animal> items) { }
+    //unbounded method
+    public static void thirdMethod(List <?> items) { }
 }
