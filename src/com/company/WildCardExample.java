@@ -19,6 +19,7 @@ public class WildCardExample {
         /*
         * 'birdList' and 'catFish' shows compilation error because the firstMethod() is lower bounded by the Fish object i.e
         * <? super Fish> in this case simply means the passed object must be of that object (Fish) or a parent of that object (Animal)
+        * Use analogy : must be a specific type or its super type
         */
         //WildCardExample.firstMethod(birdList);
         //WildCardExample.firstMethod(catFishList);
@@ -32,7 +33,7 @@ public class WildCardExample {
         /*
          * 'birdList' , 'catFishList' would compile and run because the secondMethod() is upper bounded by the Animal object i.e <? extends Animal>
          * in this case simply means the passed object must be a subtype ('B' is a subtype of 'A' if 'B' extends or implements 'A' ) of Animal
-         * Use ride analogy : You must be this tall to go on a ride (upper bounds on a certain metric)
+         * Use analogy : must be a specific type or its sub type
          */
         WildCardExample.secondMethod(catFishList);
         WildCardExample.secondMethod(birdList);
@@ -42,7 +43,13 @@ public class WildCardExample {
         WildCardExample.thirdMethod(animalList);
         WildCardExample.thirdMethod(birdList);
 
-
+        /*
+        * so in summary
+        *  - 'producer' extends ( uses the parameter type <? extends T> ) , is covariant (read only)
+        *  - 'consumer' super ( uses the parameter type <? super T> ) , is contravariant (write only)
+        *  - covariance : accepts subtypes
+        *  - contravariance : accepts supertypes
+        */
     }
 
     //lower bounded method
