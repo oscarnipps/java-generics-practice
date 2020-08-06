@@ -45,11 +45,12 @@ public class WildCardExample {
 
         /*
         * so in summary
-        *  - 'producer' extends ( uses the parameter type <? extends T> ) , is covariant (read only)
-        *  - 'consumer' super ( uses the parameter type <? super T> ) , is contravariant (write only)
-        *  - covariance : accepts subtypes
-        *  - contravariance : accepts supertypes
+        *  - 'producer' extends ( uses the parameter type <? extends T> ) , is covariant are read only
+        *  - 'consumer' super ( uses the parameter type <? super T> ) , is contravariant are write only
+        *  - covariant : accepts subtypes
+        *  - contravariant : accepts supertypes
         */
+
     }
 
     //lower bounded method
